@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Menu</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Styles from previous example */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header h2 {
+      font-weight: normal;
+      color: #4c4c4c;
+    }
+    .add-category-button {
+      background-color: #3f51b5;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .category {
+      background-color: white;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .category-title {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #4c4c4c;
+    }
+    .category-title i {
+      margin-right: 8px;
+      color: #3f51b5;
+    }
+    .actions {
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn.blue i {
+      color: #3f51b5;
+    }
+    .btn.red i {
+      color: #e53935;
+    }
+    .btn.grey i {
+      color: #888;
+    }
+    .expand-icon {
+      font-size: 16px;
+      color: #888;
+      cursor: pointer;
+    }
+    .expandable-content {
+      display: none;
+      margin-left: 20px;
+    }
+    .subcategory {
+      background-color: #f1f3f5;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .subcategory .category-title {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h2>Manage Menu - Lukka Cafe</h2>
+    <button class="add-category-button">Add Category</button>
+  </div>
+
+  <!-- Category 1 -->
+  <div class="category">
+    <div class="category-title">
+      <i class="fas fa-bars"></i>
+      Tatlılar
+    </div>
+    <div class="actions">
+      <button class="btn blue"><i class="fas fa-file-alt"></i></button>
+      <button class="btn blue"><i class="fas fa-plus"></i></button>
+      <button class="btn blue"><i class="fas fa-pen"></i></button>
+      <button class="btn red"><i class="fas fa-trash-alt"></i></button>
+      <i class="fas fa-chevron-down expand-icon"></i>
+    </div>
+  </div>
+
+  <!-- Expandable Content (Hidden by Default) -->
+  <div class="expandable-content">
+    <div class="subcategory">
+      <div class="category-title">
+        <i class="fas fa-bars"></i>
+        Soğuk içecekler
+      </div>
+      <div class="actions">
+
+        <button class="btn blue"><i class="fas fa-pen"></i></button>
+        <button class="btn red"><i class="fas fa-trash-alt"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Category 1 -->
+  <div class="category">
+    <div class="category-title">
+      <i class="fas fa-bars"></i>
+      Tatlılar
+    </div>
+    <div class="actions">
+      <button class="btn blue"><i class="fas fa-file-alt"></i></button>
+      <button class="btn blue"><i class="fas fa-plus"></i></button>
+      <button class="btn blue"><i class="fas fa-pen"></i></button>
+      <button class="btn red"><i class="fas fa-trash-alt"></i></button>
+      <i class="fas fa-chevron-down expand-icon"></i>
+    </div>
+  </div>
+
+  <!-- Expandable Content (Hidden by Default) -->
+  <div class="expandable-content">
+    <div class="subcategory">
+      <div class="category-title">
+        <i class="fas fa-bars"></i>
+        Soğuk içecekler
+      </div>
+      <div class="actions">
+
+        <button class="btn blue"><i class="fas fa-pen"></i></button>
+        <button class="btn red"><i class="fas fa-trash-alt"></i></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // JavaScript for expand/collapse functionality
+  document.querySelectorAll('.expand-icon').forEach(icon => {
+    icon.addEventListener('click', () => {
+      const expandableContent = icon.closest('.category').nextElementSibling;
+      if (expandableContent.style.display === 'none' || expandableContent.style.display === '') {
+        expandableContent.style.display = 'block';
+        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+      } else {
+        expandableContent.style.display = 'none';
+        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant List</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header h2 {
+      font-weight: normal;
+      color: #4c4c4c;
+      display: flex;
+      align-items: center;
+    }
+    .header h2 i {
+      margin-right: 10px;
+      color: #4c4c4c;
+    }
+    .add-button {
+      background-color: #3f51b5;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 15px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+    .card img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .card-content {
+      flex: 1;
+    }
+    .card-content h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #4c4c4c;
+    }
+    .card-content .details {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #888;
+    }
+    .details i {
+      margin-right: 5px;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .btn i {
+      font-size: 18px;
+    }
+    .btn.blue i {
+      color: #3f51b5;
+    }
+    .btn.red i {
+      color: #e53935;
+    }
+    .btn.grey i {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h2><i class="fas fa-utensils"></i> All Menu</h2>
+    <button class="add-button">+ Add Menu</button>
+  </div>
+  
+  <!-- Restaurant Card 1 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/50" alt="Restaurant Logo">
+    <div class="card-content">
+      <h3>Test Cafe</h3>
+      <div class="details">
+        <i class="fas fa-wave-square"></i> Scans: 3
+        <span style="margin: 0 10px;">|</span>
+        <i class="fas fa-calendar-alt"></i> Created: 07 Nov, 2024
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn blue"><i class="fas fa-file-alt"></i></button>
+      <button class="btn grey"><i class="fas fa-qrcode"></i></button>
+      <button class="btn grey"><i class="fas fa-eye"></i></button>
+      <button class="btn grey"><i class="fas fa-pen"></i></button>
+      <button class="btn red"><i class="fas fa-trash-alt"></i></button>
+    </div>
+  </div>
+  
+  <!-- Restaurant Card 2 -->
+  <div class="card">
+    <img src="https://via.placeholder.com/50" alt="Restaurant Logo">
+    <div class="card-content">
+      <h3>Test 2</h3>
+      <div class="details">
+        <i class="fas fa-wave-square"></i> Scans: 4
+        <span style="margin: 0 10px;">|</span>
+        <i class="fas fa-calendar-alt"></i> Created: 27 Oct, 2024
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn blue"><i class="fas fa-file-alt"></i></button>
+      <button class="btn grey"><i class="fas fa-qrcode"></i></button>
+      <button class="btn grey"><i class="fas fa-eye"></i></button>
+      <button class="btn grey"><i class="fas fa-pen"></i></button>
+      <button class="btn red"><i class="fas fa-trash-alt"></i></button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
