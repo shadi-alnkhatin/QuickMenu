@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .header-section {
+    background-color: #f8f9fa; /* Light background */
+    border-color: #ddd; /* Light gray border */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4TQ8Ad7nPX3wUXHrJYe6N3XdFLYbK5aHu39MLwXDVkqBggeZTN-3w1yz2KO2SN2XGECQ&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: contrast(0.8);
+}
+.cafe-info{
+    background-color: #33333389;
+
+}
+
+.cafe-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #007bff; /* Blue border around logo */
+}
+
+.cafe-name {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.cafe-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.cafe-details p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+.cafe-details i {
+    color: #007bff; /* Blue color for icons */
+    margin-right: 5px;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container-fluid mb-3 py-2">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <!-- Left-aligned button -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <i class="bi bi-list"></i>
+                    </button>
+                
+                    <!-- Right-aligned button -->
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        Call The Waiter
+                    </button>
+                </div>
+                
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" data-bs-keyboard="false" data-bs-backdrop="false" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Sidebar</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div id="sidebar" class="border rounded">
+                            <div class="nav flex-column py-3">
+                                <a href="#menu1" class="nav-link collapsed" data-bs-toggle="collapse" role="button">Item 1</a>
+                                <div class="collapse ps-2" id="menu1" data-bs-parent="#sidebar">
+                                    <a href="#menu1sub1" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">Subitem1 1</a>
+                                    <div class="collapse ps-2" id="menu1sub1" data-bs-parent="#menu1">
+                                        <a href="#" class="nav-link" data-bs-parent="#menu1sub1">Subitem a</a>
+                                        <a href="#" class="nav-link" data-bs-parent="#menu1sub1">Subitem b</a>
+                                        <a href="#menu1sub1sub1" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">Subitem c </a>
+                                        <div class="collapse" id="menu1sub1sub1" data-bs-parent="#menu1sub1sub1">
+                                            <a href="#" class="nav-link">Subitem c.1</a>
+                                            <a href="#" class="nav-link">Subitem c.2</a>
+                                        </div>
+                                        <a href="#" class="nav-link" data-bs-parent="#menu1sub1">Subitem d</a>
+                                        <a href="#menu1sub1sub2" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">Subitem e </a>
+                                        <div class="collapse" id="menu1sub1sub2">
+                                            <a href="#" class="nav-link">Subitem e.1</a>
+                                            <a href="#" class="nav-link">Subitem e.2</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#menu2" class="nav-link collapsed" data-bs-toggle="collapse" data-bs-parent="#sidebar">Item 2</a>
+                                <div class="collapse ps-2" id="menu2" data-bs-parent="#sidebar">
+                                    <a href="#menu2sub1" class="nav-link" data-bs-toggle="collapse" aria-expanded="false">Subitem2 1</a>
+                                    <div class="collapse ps-2" id="menu2sub1" data-bs-parent="#menu2">
+                                        <a href="#" class="nav-link" data-bs-parent="#menu2sub1">Subitem A</a>
+                                        <a href="#" class="nav-link" data-bs-parent="#menu2sub1">Subitem B</a>
+                                        <a href="#" class="nav-link" data-bs-parent="#menu2sub1">Subitem C</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-link">Item 3</a>
+                                <a href="#" class="nav-link">Item 4</a>
+                            </div>
+                        </div>
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"> More </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container my-4 p-4 border rounded shadow-lg header-section">
+        <div class="row align-items-center cafe-info">
+            <!-- Image Section -->
+            <div class="col-md-3 text-center">
+                <img src="https://via.placeholder.com/150" alt="Cafe Logo" class="rounded-circle img-fluid cafe-logo">
+            </div>
+            
+            <!-- Text Section -->
+            <div class="col-md-9">
+                <h2 class="cafe-name text-light">Test Cafe</h2>
+                <p class="cafe-description text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sint itaque tempore a culpa expedita voluptates molestiae vero? Doloribus vel iste fugit totam non!</p>
+                <div class="cafe-details text-light">
+                    <p class="text-light"><i class="bi bi-geo-alt-fill "></i> Jordan, Amman</p>
+                    <p class="text-light"><i class="bi bi-telephone-fill"></i> 079213123</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+    <div class="container mt-4">
+        <!-- Food Item Card -->
+        <div class="card mb-3 w-100">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Food Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Delicious Dish</h5>
+                            <p class="card-text">A delicious dish made with fresh ingredients and cooked to perfection.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="h5">$12.99</span>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addToCartModal">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat for more items -->
+        <div class="card mb-3 w-100">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Food Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Tasty Salad</h5>
+                            <p class="card-text">A fresh and healthy salad, perfect for a light meal.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="h5">$8.49</span>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addToCartModal">Add </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  <!-- Add to Cart Modal -->
+<div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addToCartModalLabel">Add to Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex align-items-center">
+                    <img src="https://via.placeholder.com/100" class="img-thumbnail me-3" alt="Food Image">
+                    <div>
+                        <h5 id="modalItemName">Delicious Dish</h5>
+                        <p class="mb-1" id="modalItemDescription">A tasty dish made with fresh ingredients.</p>
+                        <span class="h6" id="modalItemPrice">$12.99</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center">
+                    <label for="quantity" class="form-label">Quantity:</label>
+                    <div class="input-group" style="width: 120px;">
+                        <button class="btn btn-outline-secondary" type="button" id="decreaseQuantity">-</button>
+                        <input type="text" class="form-control text-center" id="quantityInput" value="1" readonly>
+                        <button class="btn btn-outline-secondary" type="button" id="increaseQuantity">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="confirmAddToCart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
